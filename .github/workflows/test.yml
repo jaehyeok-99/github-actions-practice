@@ -21,9 +21,13 @@ jobs:
     steps: 
       - name : 시작
         run: echo "hello"
+
       - name: 여러명령어 출력가능가능가능 
         run: |
           echo "1번 명령어 출력"
           echo "2번 명렁어 출력"
 
-    
+      - name: 깃허브 자체에있는 변수 사용
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
