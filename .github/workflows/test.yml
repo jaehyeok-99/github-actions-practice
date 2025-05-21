@@ -1,14 +1,31 @@
+# Workt flow 이름 
 name: Github Actions 실행
 
+# Event: 실행되는 시점을 설정 
+# main이라는 브랜치에 push 될 떄 이래 Workflow를 실행
 on:
   push:
     branchs:
       - main
 
+# 하나의 Workflow는 1개 이상의 job으로 구성된다. 
+# 여러 job은 기본적으로 병렬적으로 수행된다.  
 jobs:
+  # job을 식별하기 위한 id 
   My-Deploy-job:
+    #ubuntu 환경/ 가장 최신버전
     runs-on: ubuntu-latest
 
+    # step : 특정 작업을 수행하는 가장 작은 단위
+    # job은 여러 step들로 구성되어 있다
     steps: 
-      - name : hello
+      - name : 시작
         run: echo "hello"
+
+    steps:
+      - name: 여러명령어 출력가능가능가능 
+      - run: |
+          echo "1번 명령어 출력"
+          echo "2번 명렁어 출력"
+
+    
