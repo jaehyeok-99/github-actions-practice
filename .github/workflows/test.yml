@@ -5,7 +5,7 @@ name: Github Actions 실행
 # main이라는 브랜치에 push 될 떄 이래 Workflow를 실행
 on:
   push:
-    branchs:
+    branches:
       - main
 
 # 하나의 Workflow는 1개 이상의 job으로 구성된다. 
@@ -21,10 +21,8 @@ jobs:
     steps: 
       - name : 시작
         run: echo "hello"
-
-    steps:
       - name: 여러명령어 출력가능가능가능 
-      - run: |
+        run: |
           echo "1번 명령어 출력"
           echo "2번 명렁어 출력"
 
